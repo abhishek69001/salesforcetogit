@@ -1,0 +1,44 @@
+<apex:page standardController="Contact">
+    <!--<apex:form>
+    <apex:pageBlock title="Edit Contact">
+        <apex:pageBlockSection
+            columns ="1">
+            <apex:inputField value = '{!Contact.Lastname}'/>
+        </apex:pageBlockSection>
+        <apex:pageBlockButtons>
+            <apex:commandButton action = "{!save}" value = "Save"/>
+        </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form> -->
+    
+    
+    <!--<apex:image url="https://developer.salesforce.com/files/salesforce-developer-network-logo.png"/>
+    <apex:pageBlock title="Display Image">
+        <apex:pageBlockSection title="Name"></apex:pageBlockSection>
+    </apex:pageBlock> -->
+    
+   <!-- <apex:pageBlock title = "User details">
+    <apex:pageBlockSection>
+        {! $User.FirstName} {! $User.LastName}
+        ({! $User.UserName})
+        </apex:pageBlockSection>
+    </apex:pageBlock> -->
+    
+    
+    <!--<apex:pageBlock title="Account summary">
+        <apex:pageBlockSection >
+            Name {! Account.Name}<br/>
+            Phone {! Account.Phone}
+        </apex:pageBlockSection>
+    </apex:pageBlock> -->
+    
+    <!-- Display contact record-->
+    <apex:pageBlock title="Contact record">
+    <apex:pageBlockSection columns="1">
+        LastName {!Contact.LastName}<br/>
+        Related Account {!Contact.Owner.Email}
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+    
+</apex:page>

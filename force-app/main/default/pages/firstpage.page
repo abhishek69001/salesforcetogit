@@ -1,0 +1,4 @@
+<apex:page setup="true"  sidebar="false">
+    Name
+    abhishek
+</apex:page>

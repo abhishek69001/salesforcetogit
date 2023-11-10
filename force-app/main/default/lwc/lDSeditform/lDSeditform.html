@@ -1,0 +1,13 @@
+<template>
+<lightning-card title="LDS editform create record form" icon-name="standard:account">
+    <lightning-record-edit-form id="recordViewForm"
+                record-id={recordId}
+                object-api-name="Contact"
+                >
+        <lightning-messages></lightning-messages>
+        <lightning-input-field field-name="FirstName"></lightning-input-field>
+        <lightning-input-field field-name="LastName"></lightning-input-field>
+        <lightning-button variant="brand" label="submit" type = "submit"></lightning-button>
+    </lightning-record-edit-form>   
+</lightning-card>
+</template>

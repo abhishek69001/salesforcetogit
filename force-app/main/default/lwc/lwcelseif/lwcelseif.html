@@ -1,0 +1,27 @@
+<template>
+  <lightning-card  variant="Narrow"  title="LWCElseif" icon-name="standard:account">
+     
+   <template lwc:if={variable}>
+
+      Hi;
+   </template>
+
+    <template lwc:elseif={variable1}>
+         <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+             <lightning-button-icon  icon-name="utility:down" variant="border-filled" alternative-text="Show More" slot="actions"></lightning-button-icon>
+             <p class="slds-p-horizontal_small">Card Body Narrow (custom component)</p>
+             <p slot="footer">Card Footer</p>
+         </lightning-card>
+     
+   </template>
+
+    <template lwc:else>
+
+      Hello Hi;
+   </template>
+
+
+
+
+  </lightning-card>
+</template>

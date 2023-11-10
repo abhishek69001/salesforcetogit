@@ -1,0 +1,101 @@
+<template>
+
+    <lightning-card   title="Currency Exchange" icon-name="standard:opportunity">
+
+        
+
+          <lightning-combobox
+
+             
+
+              label="From Currency (ISO Code):"
+
+              value={fromcurrency}
+
+              options={options} 
+
+              onchange={handleSourceChange}>
+
+          </lightning-combobox>
+
+ 
+
+          <lightning-combobox
+
+              
+
+              label="To Currency (ISO Code):"
+
+              value={tocurrency}
+
+              options={options}
+
+              onchange={handleTargetChange}>
+
+          </lightning-combobox>
+
+         <lightning-input label="Amount to be converted:" value={amount}  onchange={handleAmountChange}>  </lightning-input>
+
+ 
+
+         <lightning-button variant="brand"  label="Clear"  onclick={handleClear}> </lightning-button> 
+
+                     
+
+        <lightning-button variant="Success" label="Convert" onclick={handleConvert}> </lightning-button>
+
+                      
+
+        
+
+ 
+
+        <div class="contentClass">
+
+            <table style="width:100%">
+
+                <tr>
+
+                    <th>From Currency</th>
+
+                    <th>To Currency</th> 
+
+                    <th>Amount Given</th>
+
+                    <th>Amount After Conversion</th>
+
+                    <th>Date</th>
+
+                    
+
+                </tr>
+
+                <tr>
+
+                    <td>{fromcurrency}</td>
+
+                    <td>{tocurrency}</td>
+
+                    <td>{amount}</td>
+
+                    <td>{convertedAmount}</td>
+
+                    <td>{date}</td>
+
+                
+
+                </tr>
+
+    
+
+            </table>
+
+        </div>    
+
+                  
+
+    </lightning-card>
+
+ 
+
+</template>

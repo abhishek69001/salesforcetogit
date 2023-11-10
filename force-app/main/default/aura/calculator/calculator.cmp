@@ -1,0 +1,8 @@
+<aura:component >
+	<h1>Calculator</h1>
+    <aura:attribute name = "sum" type ="Integer"/>
+    <lightning:input type = "number" aura:id="num1" label = "Enter first number"/>
+    <lightning:input type = "number" aura:id="num2" label = "Enter second number"/>
+    <lightning:input type = "submit" value = "calculate" onclick ="{!c.calculate}"/>
+    <p>Calculated Value = {!v.sum}</p>
+</aura:component>

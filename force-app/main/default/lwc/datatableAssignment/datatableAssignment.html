@@ -1,0 +1,25 @@
+<template>
+<lightning-card title="Latest Contact Records">
+      <lightning-datatable
+        key-field="Id"
+        data={contactData}
+        columns={columns}
+        onrowaction={handleRowAction}
+        hide-checkbox-column="true"
+      >
+      </lightning-datatable>
+    </lightning-card>
+    <div>
+      <!-- Modal to show the edit form -->
+      <template if:true={showEditModal}>
+          <div class="backdrop"></div>
+          <div class="modal-container">
+              <c-contact-edit-form
+                  edited-contact={selectedContact}
+                  oncancel={handleCancelEdit}
+                  onsave={handleSaveEdit}
+              ></c-contact-edit-form>
+          </div>
+      </template>
+  </div>
+</template>

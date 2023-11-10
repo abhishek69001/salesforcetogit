@@ -1,0 +1,28 @@
+.stylingsearch{
+    width: 50%;
+}
+
+.cartimage img{
+    height: 200px;
+    width: 200px; 
+    border-radius:25px
+}
+
+.cartimage :hover{
+    height: 210px;
+    width: 210px; 
+    }
+:host{
+    background-color: white;
+}
+.navbardesign{
+    background-color: black;
+}
+.toogle{
+    margin-left: 0.8px;
+    margin-right:0.8px
+
+}
+/* .carouselcolor{
+    background-color:black;
+} */

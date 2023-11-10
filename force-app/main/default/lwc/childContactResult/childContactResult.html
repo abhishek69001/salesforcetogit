@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Contact Result">
+        <template if:true={contactRecord}>
+            <div>
+                <p>Name: {contactRecord.fields.FirstName.value} {contactRecord.fields.LastName.value}</p>
+                <p>Email: {contactRecord.fields.Email.value}</p>
+                <p>Phone: {contactRecord.fields.Phone.value}</p>
+            </div>
+        </template>
+        <template if:false={contactRecord}>
+            <p>No contacts to display here.</p>
+        </template>
+    </lightning-card>
+</template>

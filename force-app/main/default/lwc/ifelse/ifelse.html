@@ -1,0 +1,22 @@
+<template>
+    <lightning-card  title="IfElse" >
+       <div class="slds-m-around_medium">
+            <lightning-input type="checkbox" label="Show details" onchange={handleChange}></lightning-input>
+       <template if:true={variable}>
+            <div class="slds-m-vertical_medium">
+                    These are the details!
+             </div>
+
+       </template>
+       <template if:false={variable}>
+
+        Plese Select the Check Box.
+              
+
+
+       </template>
+        </div>
+
+    </lightning-card>
+
+</template>

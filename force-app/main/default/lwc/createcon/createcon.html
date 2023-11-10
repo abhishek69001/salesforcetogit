@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+ 
+<lightning-record-form
+            object-api-name="Contact"
+            fields={fields}
+            record-id={contactId}
+            onsuccess={handleSuccess}
+        ></lightning-record-form>
+       
+<br>
+<br>
+<c-createconchild></c-createconchild>
+    </lightning-card>
+
+</template>

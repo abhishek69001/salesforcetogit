@@ -1,0 +1,19 @@
+<template>
+<lightning-card  variant="Narrow"  title="Contact record editing (Parent)" icon-name="standard:account">
+
+    <p>Email : - {storeid}</p>
+    <lightning-datatable
+        key-field="id"
+        data={conrecord.data}
+        show-row-number-column
+        row-number-offset={rowOffset}
+        columns={columnsList}
+        max-row-selection = 1
+        onrowselection = {selectedrowid}>
+    </lightning-datatable><br><br>
+    <div class="slds-align_absolute-center">
+    <lightning-button variant="brand" label="Details" title="titleName" onclick={viewdetails}></lightning-button>
+    </div>
+    <c-contactrecordeditingview></c-contactrecordeditingview>
+</lightning-card>
+</template>

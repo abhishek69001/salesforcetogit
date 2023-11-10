@@ -1,0 +1,14 @@
+<template>
+<lightning-card title="Account records fetching (Wire assignment)" icon-name="standard:account">
+    <lightning-input type="search" name="name" label="Search records" onchange={searchrecord}> </lightning-input>
+    <br><br><br>
+    {searched}
+        <lightning-datatable
+            key-field="id"
+            data={Accountlists.data}
+            columns={columnlist}
+        >
+        </lightning-datatable>
+       
+</lightning-card>
+</template>

@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Create Contact Record">
+        <lightning-record-form
+            object-api-name="Contact"
+            record-id = {contactId}
+            fields={fields}
+            onsuccess={handleSuccess}
+        ></lightning-record-form>
+        <c-child-contact-result contact-id={createdContactId}></c-child-contact-result>
+    </lightning-card>
+</template>

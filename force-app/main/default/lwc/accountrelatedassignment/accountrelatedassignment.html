@@ -1,0 +1,49 @@
+<template>
+<lightning-card  title="Account Records" icon-name="standard:account">
+    <div class="slds-grid">
+        <div class="slds-col slds-size_4-of-12">
+            <h1>Account Records</h1>
+    <lightning-datatable
+        key-field="id"
+        data={acrecords.data}
+        show-row-number-column
+        row-number-offset={rowOffset}
+        columns={columnslist}
+        max-row-selection = 1
+        onrowselection={handleRowAction}>
+    </lightning-datatable>
+        </div>
+
+
+ <div class="slds-col slds-size_4-of-12">
+            <h1>Contact Records</h1>
+
+  <lightning-datatable
+        key-field="id"
+        data={filteredrecords}
+        show-row-number-column
+        row-number-offset={rowOffset}
+        hide-checkbox-column
+        columns={conlists}>
+       
+    </lightning-datatable>
+ </div>
+   
+
+      <div class="slds-col slds-size_4-of-12"> 
+            <h1>Opportunity Records</h1>
+
+    <lightning-datatable
+        key-field="id"
+        data={opfilteredrecords}
+        show-row-number-column
+        row-number-offset={rowOffset}
+        hide-checkbox-column
+        columns={opplist}>
+        
+    </lightning-datatable>
+      </div>
+    </div>
+   
+</lightning-card>
+</template>

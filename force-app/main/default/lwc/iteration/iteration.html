@@ -1,0 +1,30 @@
+<template>
+    <!--ForEach-->
+    <lightning-card  variant="Narrow"  title="EMP Iteration" icon-name="standard:account">
+        <template for:each={pinnacleo} for:item="pin">
+               <li key={pin.id}>Name:-{pin.Name}</li>
+               <li key={pin.id}> Phone:{pin.Phone}</li>
+        </template>
+    </lightning-card>
+ 
+
+ <br/><br/>
+
+<!--Iteration-->
+    <lightning-card  title="Iteration" icon-name="standard:account">
+
+<template  if:true={pinnacleo}> 
+    Hi
+ <template iterator:it={pinnacleo}>
+     Hello
+       <li key={it.value.id}>
+          Name--  {it.value.Name}
+       </li>
+ </template>
+ </template>
+
+
+    </lightning-card>
+
+
+</template>

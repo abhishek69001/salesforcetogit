@@ -1,0 +1,17 @@
+<template>
+<lightning-card title="show Account Records With Rating Hot " icon-name="standard:account">
+    <lightning-button variant="brand" label="Show data" onclick={handleClick}></lightning-button>
+    <lightning-button variant="destructive" label="Hide data" onclick={hide}></lightning-button>
+
+   <template if:true={variable}>
+    <lightning-datatable
+        key-field="id"
+        data={accountrecords.data}
+        show-row-number-column
+        row-number-offset={rowOffset}
+        columns={columnsList}>
+    </lightning-datatable>
+   </template>
+    
+</lightning-card>
+</template>

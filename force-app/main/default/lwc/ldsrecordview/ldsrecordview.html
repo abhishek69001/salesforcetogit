@@ -1,0 +1,37 @@
+<template>
+    <lightning-card   title="Account View" icon-name="standard:account">
+      
+
+<lightning-record-view-form
+            record-id={recordId}
+            object-api-name={objectapiName}>
+    <div class="slds-box slds-theme_default">
+        <lightning-output-field field-name="Name"></lightning-output-field>
+        <lightning-output-field field-name="Phone"></lightning-output-field>
+        <lightning-output-field field-name="Rating"></lightning-output-field>
+        <lightning-output-field field-name="Industry"></lightning-output-field>
+        <lightning-output-field field-name="AnnualRevenue"></lightning-output-field>
+    </div>
+</lightning-record-view-form>
+<hr>
+ <lightning-record-form
+            record-id={recordid}
+            object-api-name={objectapiname}
+            mode='edit'            
+            >
+    <div class="slds-box slds-theme_default">
+        <lightning-input-field field-name="Name"></lightning-input-field>
+        <lightning-input-field field-name="Phone"></lightning-input-field>
+        <lightning-input-field field-name="Rating"></lightning-input-field>
+        <lightning-input-field field-name="Industry"></lightning-input-field>
+        <lightning-input-field field-name="AnnualRevenue"></lightning-input-field>
+    </div>
+</lightning-record-form>
+
+
+
+
+
+
+    </lightning-card>
+</template>

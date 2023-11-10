@@ -1,0 +1,14 @@
+<template>
+<lightning-card title="Contact Records" icon-name="standard:account">
+        <lightning-datatable
+            key-field="id"
+            data={accrecord}
+            show-row-number-column
+            row-number-offset={rowOffset}
+            columns={columnsList}
+            onrowaction={handleRowAction}
+            max-row-selection = 2>
+        </lightning-datatable>
+
+</lightning-card>
+</template>

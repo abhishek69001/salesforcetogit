@@ -1,0 +1,16 @@
+<template>
+<lightning-card title= "practice parent 1" icon-name="utility:connected_apps">
+    <lightning-input type="text" name="last" label="last name" onchange={handlechange}></lightning-input>
+    <lightning-input type="text" name="city" label="City Name" onchange={handlechange}></lightning-input>
+    <br>
+    <br>
+    <lightning-button variant="brand" label="submit" onclick={handleClick}></lightning-button>
+
+
+
+    <c-childpractice1 lname = ''
+    city = ''>
+    </c-childpractice1>
+   
+</lightning-card>
+</template>

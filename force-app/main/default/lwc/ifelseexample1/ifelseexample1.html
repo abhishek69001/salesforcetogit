@@ -1,0 +1,38 @@
+<template>
+    <lightning-card  title="if else example" icon-name="standard:account">
+        <p> select type</p><br>
+        
+        <template if:true={showtechnical}>
+        <lightning-input type="checkbox" label="Technical" onchange={changed}></lightning-input><br>
+        </template>
+
+        <template if:true={tech}>
+            <lightning-input type="text" placeholder="First name"></lightning-input>
+            <lightning-input type="text" placeholder="Last name"></lightning-input>
+            <lightning-combobox
+                value={technicaloptions}
+                placeholder="Select subject"
+                options={technicaloptions}
+                onchange={selectedsubjects} ></lightning-combobox>
+                selected subjects for Technical : - {technical}
+        </template>
+
+
+
+        <template if:true={shownontechnical}>
+        <lightning-input type="checkbox" label="non-Technical" onchange={changed1}></lightning-input>
+        </template>
+        <template if:true={nontech}>
+			<lightning-input type="text" placeholder="First name"></lightning-input>
+			<lightning-input type="text" placeholder="Last name"></lightning-input>
+			 <lightning-combobox
+                value={nontechnicaloptions}
+                placeholder="Select subject"
+                options={nontechnicaloptions}
+                onchange={selectedsubjectsnon}></lightning-combobox>
+                selected subjects for non-Technical : - {nontechnical}
+        </template>
+    </lightning-card>
+    
+
+</template>

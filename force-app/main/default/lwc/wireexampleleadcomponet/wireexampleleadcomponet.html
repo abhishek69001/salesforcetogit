@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Lead object record with Wire" icon-name="standard:account">
+
+        <lightning-datatable
+            key-field="id"
+            data={lelist.data}
+            columns={columnsList}
+            show-row-number-column
+            row-number-offset={rowOffset}
+            onrowselection = {selectedrowid}
+            max-row-selection = 1>
+        >
+        </lightning-datatable><br><br>
+        <div class="slds-align_absolute-center">
+        <lightning-button variant="success" label="Details" onclick={viewdetails}></lightning-button>
+        </div>
+    </lightning-card>
+
+</template>

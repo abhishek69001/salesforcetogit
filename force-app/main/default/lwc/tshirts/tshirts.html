@@ -1,0 +1,207 @@
+<template>
+	
+	<div class="slds-grid slds-gutters toogle" style={backgroundStyle}>
+  <div class="slds-col slds-size_2-of-12 " style="margin-top:1%">
+    <span><img src={logoimages} style="height: 160px; width: 160px; border-radius:25px;"></span>
+  </div>
+  <div class="slds-col slds-size_6-of-12" style="margin-top:5%">
+    <span style = "color:black"><lightning-input type="search" name="name" placeholder = "search" onchange={enteredvalue}>
+				</lightning-input></span>
+  </div>
+ 
+  <div class="slds-col slds-size_2-of-12" style="margin-top:5%;">
+    <span> <lightning-combobox
+				 name="progress"
+				 value={selectedpricefilter}
+				 placeholder="Price Range"
+				 options={price}
+				 onchange={handleChange} >
+				 </lightning-combobox></p></span>
+  </div>
+   <div class="slds-col slds-size_2-of-12 slds-clearfix">
+    <span  class="slds-float_right" style="font-size:2rem; color:white"><img src={cartimage} style="height: 100px; width: 100px; border-radius:25px; " onclick={showcart}><sup>{totalcounts}</sup></span>
+  </div>
+</div>
+
+<div class="slds-grid slds-gutters toogle" style={backgroundStyle}>
+    <div class="slds-col slds-size_12-of-12 slds-clearfix" >
+      <div class="slds-form-element slds-float_right">
+        <label class="slds-checkbox_toggle">
+          <span class="slds-form-element__label slds-m-bottom_none"></span>
+          <input type="checkbox" name="checkbox-toggle-16" value="checkbox-toggle-16" aria-describedby="checkbox-toggle-16" onclick={changeColor} />
+          <span id="checkbox-toggle-16" class="slds-checkbox_faux_container" aria-live="assertive">
+            <span class="slds-checkbox_faux"></span>
+            <span class="slds-checkbox_on">light</span>
+            <span class="slds-checkbox_off">Dark</span>
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+ 
+<!-- <div class="container" >
+
+    <lightning-button label="Toggle to change color" onclick={changeColor}></lightning-button>
+
+  </div> -->
+  
+
+
+
+<div class="slds-grid">
+<div class="slds-col slds-size_4-of-12" style={backgroundStyle} >
+  <div class="carouselcolor">
+<lightning-carousel >
+	<lightning-carousel-image 
+                    src = "https://images.pexels.com/photos/428340/pexels-photo-428340.jpeg"
+                    style="height:300px"
+                    >
+                </lightning-carousel-image>
+	<lightning-carousel-image
+                    src = "https://images.pexels.com/photos/10420045/pexels-photo-10420045.jpeg"                    
+                    style="height:300px"
+                    >
+                </lightning-carousel-image>
+	<lightning-carousel-image
+                    src = "https://images.pexels.com/photos/806626/pexels-photo-806626.jpeg"
+                    style="height:300px"
+                    >
+                </lightning-carousel-image>
+	<lightning-carousel-image
+                    src = "https://images.pexels.com/photos/9775830/pexels-photo-9775830.jpeg"
+                    style="height:300px"
+                    >
+                </lightning-carousel-image>
+</lightning-carousel>
+  </div>
+</div>
+
+<div class="slds-col slds-size_4-of-12" style={backgroundStyle}>
+<lightning-carousel>
+	<lightning-carousel-image 
+                    src = "https://images.pexels.com/photos/2294342/pexels-photo-2294342.jpeg"
+                    style="height:300px">
+                </lightning-carousel-image>
+	<lightning-carousel-image
+                    src = "https://c1.wallpaperflare.com/preview/781/75/648/believe-back-man-male.jpg"
+                    style="height:300px">
+                </lightning-carousel-image>
+	<lightning-carousel-image
+                    src = "https://images.pexels.com/photos/1311590/pexels-photo-1311590.jpeg"
+                    style="height:300px">
+                </lightning-carousel-image>
+	<lightning-carousel-image
+                    src = "https://images.pexels.com/photos/2306791/pexels-photo-2306791.jpeg"
+                    style="height:300px">
+                </lightning-carousel-image>
+</lightning-carousel>
+</div>
+
+<div class="slds-col slds-size_4-of-12" style={backgroundStyle} >
+<lightning-carousel>
+	<lightning-carousel-image 
+                    src = "https://c4.wallpaperflare.com/wallpaper/696/31/764/bon-jovi-poster-men-s-gray-v-neck-tshirt-wallpaper-preview.jpg"
+                    style="height:300px">
+                </lightning-carousel-image>
+	<lightning-carousel-image
+                    src = "https://images.pexels.com/photos/17056662/pexels-photo-17056662/free-photo-of-smiling-man-in-t-shirt.jpeg"
+                    style="height:300px">
+                </lightning-carousel-image>
+	<lightning-carousel-image
+                    src = "https://c0.wallpaperflare.com/preview/280/414/404/text-rose-caylor-and-son-tshirt.jpg"
+                    style="height:300px">
+                </lightning-carousel-image>
+	<lightning-carousel-image
+                    src = "https://c0.wallpaperflare.com/preview/280/414/404/text-rose-caylor-and-son-tshirt.jpg"
+                    style="height:300px">
+                </lightning-carousel-image>
+</lightning-carousel>
+</div>  
+</div>
+
+<div class = "bgcolor"  style={backgroundStyle}>
+
+			<div class="slds-grid slds-wrap">
+				<template for:each={filteredrecords} for:item="plist">
+					
+					<div class="slds-col slds-size_1-of-4" key={plist.Id}>
+						<br><br>
+						<div class="slds-align_absolute-center">
+							<img src={plist.Tshirt_Image__c} style="height: 400px; width: 310px; border-radius:25px" alt={plist.Tshirt_Name__c}><br></div>
+							<div class="slds-m-left_xx-large">
+							<h1 style="font-size: large; font-weight:bold; text-decoration :underline; margin-top:5%; color:orangered">
+								{plist.Tshirt_Name__c}</h1>
+						</div>
+							<div class="slds-m-left_xx-large">
+								<!-- <lightning-combobox
+                            value={selectedsize}
+                            placeholder="Select Sizes"
+                            options={sizeoptions}
+                            onchange={handleChange} ></lightning-combobox> -->
+								<br>
+								<p style="color:white" class="slds-text-heading_medium">Neck:- {plist.Neck__c}</p>
+								<span style="color:white" class="slds-text-heading_medium">Price:- {plist.Price__c}/-</span>
+							</div><br>
+							<div class="slds-align_absolute-center">
+								<lightning-button class="slds-m-left_medium"  variant="baseline" label="👁️‍🗨️" value={plist.Id} onclick={sendtocart}></lightning-button>
+								<lightning-button class="slds-m-left_medium" variant="brand" label="🛒  Add to cart" value={plist} onclick={addtocart}></lightning-button>
+
+							</div><br><br>
+
+
+							<template if:true={showModal}>
+								<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01"
+									aria-modal="true" aria-describedby="modal-content-id-1"
+									class="slds-modal slds-fade-in-open">
+									<div class="slds-modal__container">
+										<header class="slds-modal__header">
+											<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                  <lightning-icon icon-name="utility:close"
+                     alternative-text="close"
+                     variant="inverse"
+                     size="small" ></lightning-icon>
+                  <span class="slds-assistive-text">Close</span>
+               </button>
+											<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+												Modal Header with LWC</h2>
+										</header>
+										<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+											
+											<lightning-record-view-form
+                                                        record-id = {recordsid}	
+                                                        object-api-name="Products__c">
+                                                <div class="slds-box slds-theme_default">													
+                                                    <lightning-output-field field-name="Tshirt_Name__c"></lightning-output-field>
+													<lightning-output-field field-name="Price__c"></lightning-output-field>
+                                                    <lightning-output-field field-name="Size__c"></lightning-output-field>
+                                                    <lightning-output-field field-name="Neck__c"></lightning-output-field>
+                                                    
+													<!-- <div><img src={plist} style="height: 200px; width: 200px; border-radius:25px" alt={Tshirt_Name__c}></div> -->
+
+												
+                                                </div>
+                                            </lightning-record-view-form>
+								
+										</div>
+										<footer class="slds-modal__footer">
+											<button class="slds-button slds-button_neutral" onclick={closeModal}>Cancel</button>
+										</footer>
+									</div>
+								</section>
+								<div class="slds-backdrop slds-backdrop_open"></div>
+							</template>	
+
+							
+
+						</div>
+				</template>
+			</div>
+
+</div>
+
+
+
+
+
+
+</template>

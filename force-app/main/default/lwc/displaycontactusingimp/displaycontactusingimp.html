@@ -1,0 +1,18 @@
+<template>
+<lightning-card  variant="Narrow"  title="Display contact Record" icon-name="standard:account">
+
+        <lightning-datatable
+            key-field="Id"
+            data={canlist.data}
+            show-row-number-column
+            columns={columnsList}
+            
+            
+
+            onrowselection={selectedid}
+            
+            >
+        </lightning-datatable>
+    <lightning-button variant="destructive" label="delete" onclick={deleterec}></lightning-button>
+</lightning-card>
+</template>

@@ -1,0 +1,15 @@
+<template>
+<lightning-card title="View record Details (Child)" icon-name="standard:account">
+    <p>Record id :- {ids}</p><br><br><br>
+    <lightning-record-form
+         record-id = {ids}
+         object-api-name = {objectapiName}
+         fields = {fields}
+         onsubmit = {handlesuccess}
+         mode = "read-only">
+    </lightning-record-form>
+    
+    <br>
+   
+</lightning-card>
+</template>

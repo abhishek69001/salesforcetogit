@@ -1,0 +1,17 @@
+<template>
+    <!-- <lightning-card  variant="Narrow"  title="Parent com" icon-name="standard:account">
+        <c-apichild  ></c-apichild>
+    </lightning-card> -->
+
+
+    <lightning-card  variant="Narrow"  title="Parent com  method" icon-name="standard:account">
+<lightning-input type="text"  label="City"  name='name' placeholder="type here..." onchange={handlecity}></lightning-input>
+<lightning-input type="text"  label="Name" placeholder="type here..." onchange={handlename}></lightning-input>
+
+<lightning-button variant="brand" label="CallChildMethod" title="CallChildMethod" onclick={handleClick}></lightning-button>
+
+
+       <c-apichild  ></c-apichild> 
+    </lightning-card>
+
+</template>

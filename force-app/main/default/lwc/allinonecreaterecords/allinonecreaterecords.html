@@ -1,0 +1,41 @@
+<template>
+    
+<lightning-card  variant="Narrow"  title="Inserting all Records in Single Click" icon-name="standard:account"><br><br><br>
+    <div class="slds-grid slds-gutters">
+<div class="slds-col">
+<span><lightning-card title="Create account Record" icon-name="standard:account">
+<lightning-input label="Enter name" onchange={acname} required></lightning-input>
+<lightning-input label="Phone" onchange={acphone}></lightning-input>
+</lightning-card>
+</span>
+</div>
+<div class="slds-col">
+<span><lightning-card title="Create Contact" icon-name="standard:account">
+    <lightning-input label="Enter last name" onchange={conname} required></lightning-input>
+    <lightning-input label="Phone" onchange={conphone} ></lightning-input>
+    <lightning-input  type = "email" label="email" onchange={conemail} ></lightning-input>
+    
+</lightning-card></span>
+</div>
+<div class="slds-col">
+<span><lightning-card variant="Narrow" title="Create Opportuinty Record" icon-name="standard:account">
+    <lightning-input label="Opportunity Name" onchange={opname} required></lightning-input>
+    <lightning-input type="date" label="closed-date" onchange={opdate} required></lightning-input>
+    <lightning-combobox
+        label="Stage"
+        value={selectstage}
+        placeholder="none"
+        options={selectstage}
+        onchange={opstage} 
+        required ></lightning-combobox>
+   
+</lightning-card></span>
+</div>
+</div><br><br><br>
+<div class="slds-align_absolute-center">
+    <lightning-button variant="brand" label="Insert all records" onclick={handleClick}></lightning-button>
+</div>
+
+</lightning-card>
+
+</template>

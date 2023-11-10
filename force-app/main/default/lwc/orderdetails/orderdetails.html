@@ -1,0 +1,72 @@
+<template>
+<div style="background-color:white">
+    <div class="slds-align_absolute-center"><img src="https://img.icons8.com/?size=512&id=63262&format=png" height="100px" width="100px">
+    </div>
+    <div class="slds-align_absolute-center">
+    
+    <h1 style="font-size:3rem"><span style="color:#40BA4E">THANK YOU!</span> Your Order Has Been Placed. </h1>
+    <br>
+    </div>
+     <div class="slds-align_absolute-center">
+    
+    <h1 style="font-size:1rem"> The Order Confirmation email with details of your order has been sent to your email address.</h1>
+    <br>
+    <br>
+     </div>
+
+    <div class="slds-align_absolute-center">    
+     <template for:each={ordered.data} for:item="ordered">
+        <div key = {ordered.Id}>
+         <h1 style="font-size:1rem; background-color:#40BA4E; color : white;border-radius:10px" >YOUR ORDER ID:-- {ordered.Name}</h1>
+        </div>
+     </template>
+    <br>
+        
+    </div><br>
+    <div class="slds-align_absolute-center" style="background-color:#6DB576">
+    <h1 style="font-size:2rem">Order Details</h1>
+    </div>
+
+    <div class="slds-grid slds-wrap" style="margin-top:3%; margin-bottom:3%">
+        <div class = "slds-col slds-size_4-of-12 ">
+            <h1 class="slds-align_absolute-center" style="font-size:1.2rem; background-color:#dce1e9;width:80%;padding:15px"><img src="https://img.icons8.com/?size=512&id=73&format=png" height="20px" width="20px"> Shipping Address</h1>
+            <template for:each={ordered.data} for:item="ordered">
+               <div key = {ordered.Id}>
+                   <p style="padding:2%; padding-left:15%;padding-right:15%; font-size:1rem">{ordered.shipping_address__c} </p>                  
+               </div>
+            
+            </template>
+        </div>
+        <div class = "slds-col slds-size_8-of-12 ">
+            <h1 class="slds-align_absolute-center" style="font-size:1.2rem; background-color:#dce1e9;width:80%;padding:15px"><img src="https://img.icons8.com/?size=512&id=4255&format=png" height="20px" width="20px"> Order Summary</h1>
+            <template for:each={ordered.data} for:item="ordered">
+               <div key = {ordered.Id}>
+                   <p style="padding:2%; padding-left:15%;padding-right:15%; font-size:1rem">{ordered.Tshirts_Names__c} </p>
+                   <p style="padding:2%; margin-left:80%;font-size:1rem">₹{ordered.Price__c}.00</p>    
+                   <div style="padding:15px;margin-left:10%; font-size:1.2rem; background-color:#dce1e9; width:80%" class="slds-clearfix">
+                   <p class="slds-float_right"><b>Grand Total :  ₹{ordered.Price__c}.00</b></p>  
+                   <lightning-button variant="brand" label="Print" onclick={handleClick}></lightning-button>   
+                   </div>            
+
+               </div>
+            
+            </template>
+        </div>
+
+        <div class = "slds-col slds-size_4-of-12">
+            <h1 class="slds-align_absolute-center" style="font-size:1.2rem; background-color:#dce1e9; width:80%; padding:2%;"><img src="https://img.icons8.com/?size=512&id=73&format=png" height="20px" width="20px">Billing Address</h1>
+            <template for:each={ordered.data} for:item="ordered">
+               <div key = {ordered.Id}>
+                   <p style="padding:2%; padding-left:15%;padding-right:15%; font-size:1rem">{ordered.Billing_address__c} </p>                  
+               </div>
+            
+            </template>
+        </div>
+        
+    </div>
+
+    
+    
+    
+</div>
+</template>

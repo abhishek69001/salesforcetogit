@@ -1,0 +1,27 @@
+<template>
+
+    <lightning-card  variant="Narrow"  title="Get Account BY Imparative Method" icon-name="standard:account">
+         
+    <lightning-button variant="Success" label="Get Account Data" title="titleName" onclick={handleClick}></lightning-button>
+
+      <!-- <template if:true={accountresult}>
+            <template for:each={accountresult} for:item="acc">
+              <p key={acc.Id}>
+                Name:{acc.Name}<br/>
+                Rating:{acc.Rating}<br/>
+                Phone:{acc.Phone}
+              </p>
+            </template>
+      </template> -->
+<template if:true={accountresult}>
+      <lightning-datatable
+          key-field="id"
+          data={accountresult}
+          show-row-number-column
+          columns={columnsList}
+          onrowaction={handleRowAction}>
+      </lightning-datatable>
+</template>
+    </lightning-card>
+
+</template>

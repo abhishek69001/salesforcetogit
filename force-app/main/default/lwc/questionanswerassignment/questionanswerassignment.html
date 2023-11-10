@@ -1,0 +1,23 @@
+<template>
+<lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+
+    
+   <lightning-datatable
+       key-field="id"
+       data={questquestions.data}
+       show-row-number-column
+       row-number-offset={rowOffset}
+       columns={columnsList}
+       onrowselection={handleRowAction}
+       max-row-selection = 1>
+   </lightning-datatable><br>
+   <template if:true={variable}>
+    <div class="slds-align_absolute-center">
+   <lightning-button variant="brand" label="Show answer" title="titleName" onclick={handleClick}></lightning-button>
+   
+    </div>
+    </template><br><br>
+
+    <p>answer:- {storinganswer}</p>
+</lightning-card>
+</template>

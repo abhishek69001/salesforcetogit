@@ -1,0 +1,54 @@
+.dummy{
+	color : blue;
+}
+
+.dropdown {
+  position:relative;
+  display:grid;
+  
+}
+.dropdown p{
+  color:white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left:100%;
+  background-color: #131F46;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content p:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/* styles.css */
+
+.with-background-image {
+  background-image: url('https://img.freepik.com/free-vector/waving-indian-flag-design-with-blue-chakra_1017-23041.jpg?w=1060&t=st=1691478114~exp=1691478714~hmac=4ba2af0fd93e0c57a3af00e241e538683a455803ac889d75861e02e4800cd6e3'); /* Replace with the actual path to your image */
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position:right;
+  background-color: white;
+  /* You can adjust other background properties as needed */
+}
+.similar-background {
+  background-image: url('https://assets-global.website-files.com/5b7f24cc900973de13d7beb4/63f7b099178adf97cc2085fc_Write%20email%20newsletters%20to%20keep%20your%20audience%20engaged.svg'); /* Replace with the actual path to your image */
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position:right;
+  background-color: white;
+}

@@ -1,0 +1,9 @@
+<template>
+<lightning-card  variant="Narrow"  title="Create contact" icon-name="standard:account">
+    <lightning-input type="text" label="Lastname" onchange={lastnamechange} required></lightning-input>
+    <lightning-input type="Email" label="Email" onchange={emailchange}></lightning-input>
+    <lightning-input type="phone" label="Enter phone number" onchange={phonechange}></lightning-input><br>
+
+    <lightning-button variant="brand" label="create record" onclick={save}></lightning-button>
+</lightning-card>    
+</template>
